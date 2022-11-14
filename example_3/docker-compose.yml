@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    image: example_2:latest
+    build:
+      dockerfile: myproject/Dockerfile
+    ports:
+      - "8002:8080"

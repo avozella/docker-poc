@@ -6,4 +6,6 @@ RUN apk update \
 
 WORKDIR /usr/share/nginx/html/images
 
-RUN curl -o tool.gif https://media.tenor.com/qU7kKSP7JgsAAAAC/big-brain-lateralus.gif
+COPY images/ .
+
+# docker run --rm -d -p 8081:80 example_1:latest
