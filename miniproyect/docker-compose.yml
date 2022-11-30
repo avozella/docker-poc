@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  app:
+    image: miniproject:1.0
+    depends_on:
+      - db
+    build:
+      dockerfile: myproject/Dockerfile
+    ports:
+      - "8002:8080"
+
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+
+
