@@ -52,10 +52,14 @@ docker-compose down
 - docker restart: restart one or more containers.
 - docker rm: Remove one or more containers.
 - docker images: List all images.
-- docker image prune: Remove unused images.
+- docker image prune -a: Remove unused images.
 - docker image rm: Remove one or more images.
 - docker build: Build an image from a Dockerfile.
-- docker ps: Get running containers
+- docker ps: Get running containers.
+- docker ps -a: Get all existing containers.
+- docker ps -q: Get container id.
+- docker ps -aq: Get container id from all existing containers.
+- docker rm -f $(docker ps -aq): With this concatenate commands, remove the containers listed on the next command.
 - docker stats container_id / container_name: Get container status
 - docker inspect container_id / container_name: Get full info about the container
 - -d: Detach, allows you run the container in background
